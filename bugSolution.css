@@ -1,0 +1,21 @@
+/* Correct usage of calc() with percentages */
+.container {
+  width: 50%;
+}
+
+.element {
+  width: calc(50% + 20px); /* Adds pixels to a percentage width */
+}
+
+.anotherElement {
+  width: calc(50% - 20px); /* Subtracts pixels from a percentage width */
+}
+
+.elementWithParent {
+  width: calc(100% + 10px);/*Works because 10px is absolute and 100% is relative to parent*/
+}
+
+/* Incorrect usage of calc() with percentages - avoid this! */
+/*.incorrect-element {
+  width: calc(50% + 20%); /* This is incorrect, directly adding percentages is undefined */
+}*/
